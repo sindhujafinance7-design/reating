@@ -67,3 +67,5 @@ app.listen(PORT, '0.0.0.0', () => {
     console.log(`🚀 Backend server running on http://0.0.0.0:${PORT}`);
     console.log(`🔌 Connected to Supabase: ${supabaseUrl ? 'YES' : 'NO'}`);
 });
+
+module.exports = app;

@@ -13,7 +13,8 @@ function App() {
     if (rating === 0 || name.trim() === '') return;
     setIsSubmitting(true);
     try {
-      const response = await fetch('http://localhost:5000/api/ratings', {
+      const apiBaseUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const response = await fetch(`${apiBaseUrl}/api/ratings`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
