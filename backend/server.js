@@ -19,6 +19,11 @@ if (!supabaseUrl || !supabaseKey || supabaseUrl === 'YOUR_SUPABASE_PROJECT_URL_H
 
 const supabase = createClient(supabaseUrl || 'http://dummy.url', supabaseKey || 'dummy_key');
 
+// Root endpoint to show the API status
+app.get('/', (req, res) => {
+    res.send("🚀 Sindhuja Finance Rating API is running successfully!");
+});
+
 // POST endpoint to submit a rating
 app.post('/api/ratings', async (req, res) => {
     try {
